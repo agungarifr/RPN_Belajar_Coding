@@ -24,7 +24,7 @@
 =================================
 1. define function -> PESAN
 2. define vars -> NAMAKOSONG, PERANKOSONG, RESPONKSATRIA, RESPONTABIB, RESPONPENYIHIR, RESPONBOT.
-    2.1 define containers -> NAMA, PERAN, RESPON
+    2.1 define containers -> NAMA, PERAN
 3. Create input form? -> NAMA, PERAN. 
 4. Create Submit button??
 5. Create exception/function on button press ??
@@ -52,11 +52,16 @@ let RESPONPENYIHIR = " ciptakan keajaiban yang membantu kemenanganmu!";
 let RESPONBOT = "tapi kayaknya kamu jadi bot aja ya, peran yang kamu pilih ga ada";
 
 /*INPUT MANUAL SINI*/ 
-let NAMA="agus"
-let PERAN="KSATRIA"
+let NAMA="";
+let PERAN="";
 
 //fungsi/exception lempar pesan
 function PESAN(NAMA, PERAN){
+
+    if (!NAMA || NAMA=="" && !PERAN || PERAN=="") {
+        return NAMAKOSONG+ "&" +PERANKOSONG;
+        
+    }
 
     if (!NAMA || NAMA=="") {
         return NAMAKOSONG;
@@ -70,10 +75,10 @@ function PESAN(NAMA, PERAN){
         return RESPONKSATRIA;
         
     } else if (PERAN == "TABIB") {
-        return RESPONKTABIB;
+        return RESPONTABIB;
         
     } else if (PERAN == "PENYIHIR") {
-        return RESPONKPENYIHIR;
+        return RESPONPENYIHIR;
         
     }else  {
         return RESPONBOT;
