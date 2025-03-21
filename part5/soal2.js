@@ -25,11 +25,16 @@ let ddmmyy;
 */
 
 /*
-const arraybulan =["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember","Desuari"];// declare array 
-const indexbulan = bulan -1;//array mulai dr 0
+const arraybulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
 
-const ddmmyy = tanggal+" "+arraybulan[indexbulan]+" "+tahun;
-console.log(ddmmyy);
+// Check if month is valid
+if (bulan >= 1 && bulan <= 12) {
+  const indexbulan = bulan - 1; // array mulai dr 0
+  const ddmmyy = tanggal + " " + arraybulan[indexbulan] + " " + tahun;
+  console.log(ddmmyy);
+} else {
+  console.log("cuman ada bulan 1 - 12 bang");
+}
 */
 
 
